@@ -19,4 +19,4 @@ id = "9c1e8eb6e34f4943bd462b2114409480"
 
 [vars]
 # Your app's web address, used in emails and push (update after first deploy)
-APP_ORIGIN = "https://salat-stars.workers.dev"
+APP_ORIGIN = "https://your-address"
