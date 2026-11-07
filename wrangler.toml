@@ -1,0 +1,22 @@
+name = "salat-stars"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]
+
+# Prayer reminders every 5 minutes
+[triggers]
+crons = ["*/5 * * * *"]
+
+# Storage — paste your KV namespace ID below (Cloudflare → Storage & Databases → KV → Create "salat-stars")
+[[kv_namespaces]]
+binding = "STARS"
+id = "PASTE_YOUR_KV_NAMESPACE_ID_HERE"
+
+[vars]
+# Your app's web address, used in emails and push (update after first deploy)
+APP_ORIGIN = "https://salat-stars.workers.dev"
